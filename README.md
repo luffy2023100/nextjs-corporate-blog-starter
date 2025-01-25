@@ -63,8 +63,10 @@ Simply copy the Tailwind Class onto the [FullWidthHeader Component](/src/compone
 First, install the dependencies:
 
 ```bash
-npm i
+npm i --legacy-peer-deps
 ```
+
+**IMPORTANT**: There's a dependency (next-themes) that's not upgraded to React 19 so you will need to add the `--legacy-peer-deps` into the install command. Make sure that Vercel's install command is set to use `npm i --legacy-peer-deps` too!
 
 Then, copy the `.env.example` file to `.env`:
 

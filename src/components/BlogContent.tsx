@@ -14,9 +14,10 @@ import { processTableOfContents, TableOfContents } from "./TOC";
 import { ContentWithCustomComponents } from "@wisp-cms/react-custom-component";
 import { FAQ } from "./WispComponents/FAQ";
 import { formatFullDate } from "@/lib/date";
+import { CommentSection } from "./CommentSection";
 
 export const BlogContent = ({
-  post: { title, content, author, publishedAt, tags },
+  post: { title, content, author, publishedAt, tags, slug },
   relatedPosts,
 }: {
   post: {
@@ -103,6 +104,7 @@ export const BlogContent = ({
             </Link>
           ))}
         </div>
+        <CommentSection slug={slug} />
         <RelatedPosts posts={relatedPosts} />
       </div>
     </>
